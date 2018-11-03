@@ -1,0 +1,30 @@
+[help]
+  autocorrect = 1
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  hooksPath = ~/.githooks
+  editor = vim
+[user]
+  name = kyubuns
+  email = kyubuns@gmail.com
+  signingkey = 18186B00A98B61756BE9BA8F3CA634A2AC175A9D
+[alias]
+  df = diff --color-words
+  cp = cherry-pick
+  st = status
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+[gpg]
+  program = gpg
+[commit]
+  template = ~/.gitmessage
+[diff]
+  algorithm = patience
+[merge]
+  ff = false
+[pull]
+  ff = only

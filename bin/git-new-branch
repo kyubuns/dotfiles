@@ -1,0 +1,10 @@
+set -eu
+git safe-reset
+git fetch
+git checkout origin/master
+if [ $# -ge 1 ]; then
+  git cp $1
+fi
+if [ $# -ge 2 ]; then
+  git checkout -b $2
+fi
